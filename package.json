@@ -1,0 +1,31 @@
+{
+  "name": "emptyfunction",
+  "version": "1.0.0",
+  "author": {
+    "name": "Christophe Bol"
+  },
+  "bugs": {
+    "url": "https://github.com/boljen/emptyfunctionjs/issues"
+  },
+  "description": "An empty function.",
+  "devDependencies": {
+    "mocha": "^1.20.0",
+    "should": "^4.0.0"
+  },
+  "homepage": "https://github.com/boljen/emptyfunctionjs",
+  "keywords": [
+    "empty",
+    "function",
+    "closure",
+    "callback"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boljen/emptyfunctionjs.git"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
