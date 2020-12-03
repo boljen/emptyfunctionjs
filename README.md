@@ -1,6 +1,6 @@
 # emptyFunction (Javascript)
 
-The module exports nothing but an empty function/closure.
+The module exports nothing but an empty function.
 
 ## install
 
@@ -8,11 +8,11 @@ The module exports nothing but an empty function/closure.
 
 ## Usage
 
-Get the empty closure from the module
+Get the empty function from the module
 
     var emptyFunction = require('emptyfunction');
 
-Now use the function whenever there is an optional closure within your code.
+Now use the function whenever there is an optional callback within your code.
 
     function example(cb) {
       if (!cb) cb = emptyFunction
@@ -21,7 +21,7 @@ Now use the function whenever there is an optional closure within your code.
 
 ### isEmptyFunction
 
-Sometimes you might need to verify whether the closure is an empty function.
+Sometimes you might need to verify whether the callback is an empty function.
 
 If you have access to the emptyFunction object you can do a strict comparison.
 
@@ -33,20 +33,20 @@ If not, a more hacky solution is to use the name of the function:
 
 ### Utilities
 
-A simple function to check whether we're dealing with an actual closure:
+A simple function to check whether we're dealing with a callback that exists:
 
-    function isClosure(cb) {
+    function isCallback(cb) {
       return (cb && cb !== emptyFunction) ? true: false
     }
 
-A simple function to make assigning closures easier:
+A simple function to make assigning callbacks easier:
 
-    function setClosure(cb) {
-      return (isClosure(cb)) ? cb : emptyFunction
+    function setCallback(cb) {
+      return (isCallback(cb)) ? cb : emptyFunction
     }
 
     // Usage:
-    var myClosure = setClosure(cb)
+    var myAlwaysWorkingCallback = setCallback(cb)
 
 ## License
 
